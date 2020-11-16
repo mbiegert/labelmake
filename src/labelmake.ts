@@ -107,7 +107,7 @@ const labelmake = async ({
     font && (template.fontName || fontNamesInSchemas.length > 0);
   const fontValues = isUseMyfont
     ? await Promise.all(
-        Object.values(font!).map((v) => pdfDoc.embedFont(v, { subset: true }))
+        Object.values(font!).map((v) => pdfDoc.embedFont(v, { subset: false }))
       )
     : [];
   const fontObj = isUseMyfont

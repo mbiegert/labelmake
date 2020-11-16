@@ -135,7 +135,7 @@ var labelmake = function (_a) {
                     pdfDoc.registerFontkit(fontkit_1.default);
                     isUseMyfont = font && (template.fontName || fontNamesInSchemas.length > 0);
                     if (!isUseMyfont) return [3 /*break*/, 3];
-                    return [4 /*yield*/, Promise.all(Object.values(font).map(function (v) { return pdfDoc.embedFont(v, { subset: true }); }))];
+                    return [4 /*yield*/, Promise.all(Object.values(font).map(function (v) { return pdfDoc.embedFont(v, { subset: false }); }))];
                 case 2:
                     _b = _f.sent();
                     return [3 /*break*/, 4];
